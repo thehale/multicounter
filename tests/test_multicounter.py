@@ -5,17 +5,12 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import pytest
 
-from multicounter import __version__
 from multicounter import MultiCounter
 
 
 @pytest.fixture
 def mc():
     return MultiCounter()
-
-
-def test_version():
-    assert __version__ == "0.1.1"
 
 
 def test_new_multicounter_has_no_counters(mc):
