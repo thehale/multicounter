@@ -67,3 +67,11 @@ def test_can_stringify_multicounter(mc):
 def test_can_count_backwards(mc):
     mc.cookies -= 1
     assert mc.cookies == -1
+
+
+def test_can_multiply_counter(mc):
+    mc.cookies = 1
+    mc.pies = 3
+    mc.cookies *= 3
+    assert mc.cookies == 3
+    assert mc.pies == 3
