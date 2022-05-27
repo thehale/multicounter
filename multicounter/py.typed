@@ -1,0 +1,10 @@
+// Copyright (c) 2022 Joseph Hale
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// This file enables PEP561 compliant type checkers like
+// [mypy](https://mypy.readthedocs.io/en/stable/index.html)
+// to consider the functions in this module as
+// **statically typed**.
