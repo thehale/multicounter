@@ -2,9 +2,13 @@
     // How to build the devcontainer
     "build": {
         "dockerfile": "Dockerfile",
+        "args": {
+            // Source: https://code.visualstudio.com/docs/remote/devcontainerjson-reference#_variables-in-devcontainerjson
+            "PROJECT_FOLDER_NAME": "${containerWorkspaceFolderBasename}"
+        },
         "context": ".."
     },
-    "postCreateCommand": "pre-commit install",
+    "postCreateCommand": "poetry install && pre-commit install",
 
     // VS Code tooling and settings to include automatically.
     "extensions": [

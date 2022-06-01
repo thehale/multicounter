@@ -1,11 +1,9 @@
 FROM jhale1805/python-poetry:1.1.13-py3.8-slim
-ENV PROJECT_ROOT_DIR=/workspaces
+ARG PROJECT_FOLDER_NAME
+ENV PROJECT_ROOT_DIR=/workspaces/$PROJECT_FOLDER_NAME
 
 RUN apt update \
-    && apt install git --assume-yes --no-install-recommends
+    && apt install git make --assume-yes --no-install-recommends
 
 WORKDIR $PROJECT_ROOT_DIR
 ENV PATH="$PROJECT_ROOT_DIR/.venv/bin:$PATH"
-
-COPY poetry.lock pyproject.toml ./
-RUN poetry install
