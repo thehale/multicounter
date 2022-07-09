@@ -1,4 +1,4 @@
-FROM thehale/python-poetry:1.1.13-py3.8-slim
+FROM thehale/python-poetry:1.1.14-py3.8-slim
 ARG PROJECT_FOLDER_NAME
 ENV PROJECT_ROOT_DIR=/workspaces/$PROJECT_FOLDER_NAME
 
