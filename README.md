@@ -10,6 +10,11 @@
 
 A simple, elegant counter with support for counting multiple things at once.
 
+<!-- BADGES -->
+[![](https://badgen.net/github/license/thehale/multicounter)](https://github.com/thehale/multicounter/blob/master/LICENSE)
+[![](https://badgen.net/badge/icon/Sponsor/pink?icon=github&label)](https://github.com/sponsors/thehale)
+[![](https://badgen.net/badge/icon/Follow%20@jhaledev/1DA1F2?icon=twitter&label)](https://twitter.com/intent/user?screen_name=jhaledev)
+
 ## Installation
 
 ### Pip
