@@ -1,9 +1,12 @@
 name: Auto-merge Dependabot PRs
 
 on:
-  check_suite:
+  workflow_run:
     types:
       - completed
+    workflows:
+      # List all required workflow names here.
+      - 'Run `pre-commit` on PRs'
 
 jobs:
   merge-me:
