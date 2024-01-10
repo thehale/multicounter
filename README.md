@@ -13,7 +13,7 @@ A simple, elegant counter with support for counting multiple things at once.
 <!-- BADGES -->
 [![](https://badgen.net/github/license/thehale/multicounter)](https://github.com/thehale/multicounter/blob/master/LICENSE)
 [![](https://badgen.net/badge/icon/Sponsor/pink?icon=github&label)](https://github.com/sponsors/thehale)
-[![](https://img.shields.io/badge/LinkedIn-thehale-0A66C2?logo=linkedin)](https://linkedin.com/in/thehale)
+[![](https://img.shields.io/badge/Follow-thehale-0A66C2?logo=linkedin)](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=thehale)
 
 ## Installation
 
