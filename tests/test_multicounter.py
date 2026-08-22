@@ -18,7 +18,7 @@ def test_new_multicounter_has_no_counters(mc):
 
 
 def test_can_initialize_new_counter(mc):
-    mc.cookies
+    mc.cookies  # noqa: B018
     assert mc.get_counters() == {"cookies": 0}
 
 

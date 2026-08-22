@@ -1,23 +1,61 @@
-[tool.poetry]
-name = "multicounter"
-version = "0.2.0"
-description = "A simple, elegant counter with support for counting multiple things at once."
-authors = ["Joseph Hale <me@jhale.dev>"]
-license = "MPL-2.0"
-readme = "README.md"
-homepage = "https://github.com/thehale/multicounter"
-repository = "https://github.com/thehale/multicounter"
-documentation = "https://github.com/thehale/multicounter"
-keywords = [ "counter", "statistics" ]
-
-[tool.poetry.dependencies]
-python = "^3.8"
-
-[tool.poetry.group.dev.dependencies]
-black = "^24.4.2"
-pytest = ">=7.4,<9.0"
-pre-commit = ">=2.21,<4.0"
-
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "multicounter"
+dynamic = ["version"]
+description = 'A simple, elegant counter with support for counting multiple things at once.'
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MPL-2.0"
+keywords = []
+authors = [
+  { name = "Joseph Hale", email = "me@jhale.dev" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/thehale/multicounter#readme"
+Issues = "https://github.com/thehale/multicounter/issues"
+Source = "https://github.com/thehale/multicounter"
+
+[tool.hatch.version]
+path = "src/multicounter/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/multicounter tests}"
+
+[tool.coverage.run]
+source_pkgs = ["multicounter", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/multicounter/__about__.py",
+]
+
+[tool.coverage.paths]
+multicounter = ["src/multicounter", "*/multicounter/src/multicounter"]
+tests = ["tests", "*/multicounter/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
